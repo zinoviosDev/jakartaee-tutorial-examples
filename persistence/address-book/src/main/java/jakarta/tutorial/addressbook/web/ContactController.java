@@ -12,20 +12,21 @@ package jakarta.tutorial.addressbook.web;
 
 import java.io.Serializable;
 import java.util.ResourceBundle;
+
+import jakarta.ejb.EJB;
+import jakarta.enterprise.context.SessionScoped;
+import jakarta.faces.component.UIComponent;
+import jakarta.faces.context.FacesContext;
+import jakarta.faces.convert.Converter;
+import jakarta.faces.convert.FacesConverter;
+import jakarta.faces.model.DataModel;
+import jakarta.faces.model.ListDataModel;
+import jakarta.faces.model.SelectItem;
+import jakarta.inject.Named;
 import jakarta.tutorial.addressbook.ejb.ContactFacade;
 import jakarta.tutorial.addressbook.entity.Contact;
 import jakarta.tutorial.addressbook.web.util.JsfUtil;
 import jakarta.tutorial.addressbook.web.util.PaginationHelper;
-import javax.ejb.EJB;
-import javax.enterprise.context.SessionScoped;
-import javax.faces.component.UIComponent;
-import javax.faces.context.FacesContext;
-import javax.faces.convert.Converter;
-import javax.faces.convert.FacesConverter;
-import javax.faces.model.DataModel;
-import javax.faces.model.ListDataModel;
-import javax.faces.model.SelectItem;
-import javax.inject.Named;
 
 @Named
 @SessionScoped
@@ -192,10 +193,10 @@ public class ContactController implements Serializable {
     }
 
     @FacesConverter(forClass=Contact.class)
-    public static class ContactControllerConverter implements Converter {
+    public static class ContactControllerConverter implements Converter<Contact> {
 
         @Override
-        public Object getAsObject(FacesContext facesContext, UIComponent component, String value) {
+        public Contact getAsObject(FacesContext facesContext, UIComponent component, String value) {
             if (value == null || value.length() == 0) {
                 return null;
             }
@@ -217,7 +218,7 @@ public class ContactController implements Serializable {
         }
 
         @Override
-        public String getAsString(FacesContext facesContext, UIComponent component, Object object) {
+        public String getAsString(FacesContext facesContext, UIComponent component, Contact object) {
             if (object == null) {
                 return null;
             }

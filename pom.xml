@@ -51,11 +51,11 @@
         <maven.exec.plugin.version>1.2.1</maven.exec.plugin.version>
         <junit.version>4.11</junit.version>
         <eclipselink.version>2.7.4</eclipselink.version>
-        <glassfish.embedded.version>5.1.0</glassfish.embedded.version>
+        <glassfish.embedded.version>6.0.0</glassfish.embedded.version>
         <cargo.plugin.version>1.8.3</cargo.plugin.version>
         <glassfish.domain.name>domain1</glassfish.domain.name>
-        <glassfish.home>${glassfish.home.prefix}/glassfish5</glassfish.home>
-        <integration.container.id>glassfish4x</integration.container.id>
+        <glassfish.home>${glassfish.home.prefix}/glassfish6</glassfish.home>
+        <integration.container.id>glassfish6x</integration.container.id>
         <maven.deploy.skip>true</maven.deploy.skip>
         <maven.javadoc.skip>true</maven.javadoc.skip>
         <maven.source.skip>true</maven.source.skip>
@@ -104,7 +104,7 @@
                 </file>
             </activation>
             <properties>
-                <glassfish.home>${glassfish.home.prefix}/glassfish5</glassfish.home>
+                <glassfish.home>${glassfish.home.prefix}/glassfish6</glassfish.home>
             </properties>
         </profile>
         <profile>

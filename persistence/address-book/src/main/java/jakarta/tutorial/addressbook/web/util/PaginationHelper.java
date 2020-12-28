@@ -10,7 +10,7 @@
 
 package jakarta.tutorial.addressbook.web.util;
 
-import javax.faces.model.DataModel;
+import jakarta.faces.model.DataModel;
 
 public abstract class PaginationHelper {
 
