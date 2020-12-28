@@ -15,7 +15,7 @@
     <parent>
 	<groupId>org.eclipse.ee4j</groupId>
 	<artifactId>project</artifactId>
-	<version>1.0.5</version>
+	<version>1.0.6</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <groupId>jakarta.tutorial</groupId>
@@ -36,11 +36,11 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <jakartaee.api.version>8.0.0</jakartaee.api.version>
-        <maven.compiler.plugin.version>3.1</maven.compiler.plugin.version>
-        <maven.source.plugin.version>2.2.1</maven.source.plugin.version>
-        <maven.clean.plugin.version>2.5</maven.clean.plugin.version>
-        <maven.war.plugin.version>2.3</maven.war.plugin.version>
+        <jakartaee.api.version>9.0.0</jakartaee.api.version>
+        <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
+        <maven.source.plugin.version>3.2.1</maven.source.plugin.version>
+        <maven.clean.plugin.version>3.1.0</maven.clean.plugin.version>
+        <maven.war.plugin.version>3.2.3</maven.war.plugin.version>
         <maven.acr.plugin.version>1.0</maven.acr.plugin.version>
         <maven.ear.plugin.version>2.8</maven.ear.plugin.version>
         <maven.ejb.plugin.version>2.3</maven.ejb.plugin.version>
@@ -52,7 +52,7 @@
         <junit.version>4.11</junit.version>
         <eclipselink.version>2.7.4</eclipselink.version>
         <glassfish.embedded.version>5.1.0</glassfish.embedded.version>
-        <cargo.plugin.version>1.7.7</cargo.plugin.version>
+        <cargo.plugin.version>1.8.3</cargo.plugin.version>
         <glassfish.domain.name>domain1</glassfish.domain.name>
         <glassfish.home>${glassfish.home.prefix}/glassfish5</glassfish.home>
         <integration.container.id>glassfish4x</integration.container.id>

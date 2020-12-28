@@ -25,8 +25,8 @@
     </parent>
     
     <properties>
-        <eclipselink.version>2.5.0</eclipselink.version>
-        <maven.processor.plugin.version>2.2.1</maven.processor.plugin.version>
+        <eclipselink.version>3.0.0</eclipselink.version>
+        <maven.processor.plugin.version>4.5-jdk8</maven.processor.plugin.version>
     </properties>
 
     <dependencies>
