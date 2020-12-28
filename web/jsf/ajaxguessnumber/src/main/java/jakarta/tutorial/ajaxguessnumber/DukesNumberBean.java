@@ -12,8 +12,9 @@ package jakarta.tutorial.ajaxguessnumber;
 
 import java.io.Serializable;
 import java.util.Random;
-import javax.enterprise.context.SessionScoped;
-import javax.inject.Named;
+
+import jakarta.enterprise.context.SessionScoped;
+import jakarta.inject.Named;
 
 /**
  *
