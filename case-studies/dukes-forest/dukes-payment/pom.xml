@@ -18,7 +18,7 @@
     <parent>
         <groupId>jakarta.tutorial</groupId>
         <artifactId>dukes-forest</artifactId>
-        <version>8.1-SNAPSHOT</version>
+        <version>9.0-SNAPSHOT</version>
     </parent>
 
     <artifactId>dukes-payment</artifactId>

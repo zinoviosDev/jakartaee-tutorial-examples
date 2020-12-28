@@ -16,7 +16,7 @@
     <parent>
         <artifactId>jms</artifactId>
         <groupId>jakarta.tutorial</groupId>
-        <version>8.1-SNAPSHOT</version>
+        <version>9.0-SNAPSHOT</version>
     </parent>
 
     <artifactId>simple</artifactId>
