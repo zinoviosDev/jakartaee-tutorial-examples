@@ -12,11 +12,11 @@
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-    <parent>
-	<groupId>org.eclipse.ee4j</groupId>
-	<artifactId>project</artifactId>
-	<version>1.0.6</version>
-    </parent>
+	<parent>
+		<groupId>org.eclipse.ee4j</groupId>
+		<artifactId>project</artifactId>
+		<version>1.0.6</version>
+	</parent>
     <modelVersion>4.0.0</modelVersion>
     <groupId>jakarta.tutorial</groupId>
     <artifactId>examples</artifactId>
@@ -49,8 +49,8 @@
         <maven.license.plugin.version>1.10.b1</maven.license.plugin.version>
         <maven.release.plugin.version>2.5.2</maven.release.plugin.version>
         <maven.exec.plugin.version>1.2.1</maven.exec.plugin.version>
-        <junit.version>4.11</junit.version>
-        <eclipselink.version>2.7.4</eclipselink.version>
+        <junit.version>4.13.1</junit.version>
+        <eclipselink.version>3.0.0</eclipselink.version>
         <glassfish.embedded.version>6.0.0</glassfish.embedded.version>
         <cargo.plugin.version>1.8.3</cargo.plugin.version>
         <glassfish.domain.name>domain1</glassfish.domain.name>
