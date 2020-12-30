@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2014, 2020 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -12,26 +12,28 @@ package jakarta.tutorial.traffic.rar;
 
 import java.io.Serializable;
 import java.util.logging.Logger;
+
+import javax.transaction.xa.XAResource;
+
+import jakarta.resource.ResourceException;
+import jakarta.resource.spi.ActivationSpec;
+import jakarta.resource.spi.BootstrapContext;
+import jakarta.resource.spi.Connector;
+import jakarta.resource.spi.ResourceAdapter;
+import jakarta.resource.spi.ResourceAdapterInternalException;
+import jakarta.resource.spi.endpoint.MessageEndpoint;
+import jakarta.resource.spi.endpoint.MessageEndpointFactory;
+import jakarta.resource.spi.work.Work;
+import jakarta.resource.spi.work.WorkException;
+import jakarta.resource.spi.work.WorkManager;
 import jakarta.tutorial.traffic.rar.inbound.ObtainEndpointWork;
 import jakarta.tutorial.traffic.rar.inbound.TrafficActivationSpec;
 import jakarta.tutorial.traffic.rar.inbound.TrafficServiceSubscriber;
-import javax.resource.ResourceException;
-import javax.resource.spi.ActivationSpec;
-import javax.resource.spi.BootstrapContext;
-import javax.resource.spi.Connector;
-import javax.resource.spi.ResourceAdapter;
-import javax.resource.spi.ResourceAdapterInternalException;
-import javax.resource.spi.endpoint.MessageEndpoint;
-import javax.resource.spi.endpoint.MessageEndpointFactory;
-import javax.resource.spi.work.Work;
-import javax.resource.spi.work.WorkException;
-import javax.resource.spi.work.WorkManager;
-import javax.transaction.xa.XAResource;
 
 @Connector(
         displayName = "TrafficRA",
-        vendorName = "Java EE Tutorial", 
-        version = "7.0"
+        vendorName = "Jakarta EE Tutorial", 
+        version = "9.0"
 )
 public class TrafficResourceAdapter implements ResourceAdapter, Serializable {
     
