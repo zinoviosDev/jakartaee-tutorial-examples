@@ -30,12 +30,14 @@ import jakarta.persistence.TypedQuery;
 import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.persistence.criteria.CriteriaQuery;
 import jakarta.persistence.criteria.Root;
-import jakarta.tutorial.dukestutoring.entity.Address;
-import jakarta.tutorial.dukestutoring.entity.Administrator;
-import jakarta.tutorial.dukestutoring.entity.Guardian;
-import jakarta.tutorial.dukestutoring.entity.Person;
-import jakarta.tutorial.dukestutoring.entity.Student;
 import jakarta.ws.rs.Path;
+import jakartaee.tutorial.dukestutoring.entity.Address;
+import jakartaee.tutorial.dukestutoring.entity.Address_;
+import jakartaee.tutorial.dukestutoring.entity.Administrator;
+import jakartaee.tutorial.dukestutoring.entity.Guardian;
+import jakartaee.tutorial.dukestutoring.entity.Person;
+import jakartaee.tutorial.dukestutoring.entity.Student;
+import jakartaee.tutorial.dukestutoring.entity.Student_;
 
 /**
  *

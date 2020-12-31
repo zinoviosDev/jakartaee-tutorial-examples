@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, 2019 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2014, 2020 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -38,14 +38,6 @@ import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.persistence.criteria.CriteriaQuery;
 import jakarta.persistence.criteria.Join;
 import jakarta.persistence.criteria.Root;
-import jakarta.tutorial.dukestutoring.entity.Guardian;
-import jakarta.tutorial.dukestutoring.entity.Guardian_;
-import jakarta.tutorial.dukestutoring.entity.StatusEntry;
-import jakarta.tutorial.dukestutoring.entity.StatusEntry_;
-import jakarta.tutorial.dukestutoring.entity.Student;
-import jakarta.tutorial.dukestutoring.entity.Student_;
-import jakarta.tutorial.dukestutoring.entity.TutoringSession;
-import jakarta.tutorial.dukestutoring.entity.TutoringSession_;
 import jakarta.tutorial.dukestutoring.events.StatusEvent;
 import jakarta.tutorial.dukestutoring.util.CalendarUtil;
 import jakarta.tutorial.dukestutoring.util.StatusType;
@@ -53,6 +45,14 @@ import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.PathParam;
 import jakarta.ws.rs.Produces;
+import jakartaee.tutorial.dukestutoring.entity.Guardian;
+import jakartaee.tutorial.dukestutoring.entity.Guardian_;
+import jakartaee.tutorial.dukestutoring.entity.StatusEntry;
+import jakartaee.tutorial.dukestutoring.entity.StatusEntry_;
+import jakartaee.tutorial.dukestutoring.entity.Student;
+import jakartaee.tutorial.dukestutoring.entity.Student_;
+import jakartaee.tutorial.dukestutoring.entity.TutoringSession;
+import jakartaee.tutorial.dukestutoring.entity.TutoringSession_;
 
 /**
  *

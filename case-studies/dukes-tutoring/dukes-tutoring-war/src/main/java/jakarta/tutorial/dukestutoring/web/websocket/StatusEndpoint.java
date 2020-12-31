@@ -25,12 +25,12 @@ import jakarta.enterprise.event.Observes;
 import jakarta.json.Json;
 import jakarta.json.stream.JsonGenerator;
 import jakarta.tutorial.dukestutoring.ejb.RequestBean;
-import jakarta.tutorial.dukestutoring.entity.Student;
 import jakarta.tutorial.dukestutoring.events.StatusEvent;
 import jakarta.websocket.OnClose;
 import jakarta.websocket.OnOpen;
 import jakarta.websocket.Session;
 import jakarta.websocket.server.ServerEndpoint;
+import jakartaee.tutorial.dukestutoring.entity.Student;
 
 @ServerEndpoint("/status")
 @Dependent

@@ -19,7 +19,7 @@ import jakarta.faces.component.UIComponent;
 import jakarta.faces.context.FacesContext;
 import jakarta.faces.convert.Converter;
 import jakarta.faces.convert.FacesConverter;
-import jakarta.tutorial.dukestutoring.entity.Student;
+import jakartaee.tutorial.dukestutoring.entity.Student;
 
 /**
  *

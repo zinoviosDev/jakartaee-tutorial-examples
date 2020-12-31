@@ -26,9 +26,9 @@ import jakarta.ejb.Startup;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.persistence.criteria.CriteriaBuilder;
-import jakarta.tutorial.dukestutoring.entity.Administrator;
-import jakarta.tutorial.dukestutoring.entity.Guardian;
-import jakarta.tutorial.dukestutoring.entity.Student;
+import jakartaee.tutorial.dukestutoring.entity.Administrator;
+import jakartaee.tutorial.dukestutoring.entity.Guardian;
+import jakartaee.tutorial.dukestutoring.entity.Student;
 
 /**
  *
@@ -152,7 +152,7 @@ public class ConfigBean {
         admin.setFirstName("Admin");
         admin.setLastName("Administrator");
         admin.setEmail("admin@example.com");
-        admin.setPassword("javaee");
+        admin.setPassword("jakartaee");
         result = adminBean.createAdministrator(admin);
 
     }

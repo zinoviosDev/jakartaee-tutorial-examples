@@ -18,10 +18,10 @@ import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Inject;
 import jakarta.inject.Named;
 import jakarta.tutorial.dukestutoring.ejb.AdminBean;
-import jakarta.tutorial.dukestutoring.entity.Guardian;
-import jakarta.tutorial.dukestutoring.entity.Student;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
+import jakartaee.tutorial.dukestutoring.entity.Guardian;
+import jakartaee.tutorial.dukestutoring.entity.Student;
 
 @Named
 @RequestScoped

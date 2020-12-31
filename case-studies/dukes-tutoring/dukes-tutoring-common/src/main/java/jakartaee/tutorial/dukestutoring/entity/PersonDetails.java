@@ -8,7 +8,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package jakarta.tutorial.dukestutoring.entity;
+package jakartaee.tutorial.dukestutoring.entity;
 
 import java.io.Serializable;
 import java.util.Date;

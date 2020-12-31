@@ -14,10 +14,10 @@ import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Inject;
 import jakarta.inject.Named;
 import jakarta.tutorial.dukestutoring.ejb.AdminBean;
-import jakarta.tutorial.dukestutoring.entity.Address;
-import jakarta.tutorial.dukestutoring.entity.Student;
 import jakarta.validation.constraints.Digits;
 import jakarta.validation.constraints.NotNull;
+import jakartaee.tutorial.dukestutoring.entity.Address;
+import jakartaee.tutorial.dukestutoring.entity.Student;
 
 @Named
 @RequestScoped

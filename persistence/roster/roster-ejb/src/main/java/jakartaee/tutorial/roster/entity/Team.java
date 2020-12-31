@@ -8,7 +8,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package jakarta.tutorial.roster.entity;
+package jakartaee.tutorial.roster.entity;
 
 import java.io.Serializable;
 import java.util.Collection;

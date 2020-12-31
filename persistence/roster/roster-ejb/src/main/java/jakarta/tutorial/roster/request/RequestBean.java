@@ -29,18 +29,18 @@ import jakarta.persistence.criteria.CriteriaQuery;
 import jakarta.persistence.criteria.Join;
 import jakarta.persistence.criteria.Predicate;
 import jakarta.persistence.criteria.Root;
-import jakarta.tutorial.roster.entity.League;
-import jakarta.tutorial.roster.entity.League_;
-import jakarta.tutorial.roster.entity.Player;
-import jakarta.tutorial.roster.entity.Player_;
-import jakarta.tutorial.roster.entity.SummerLeague;
-import jakarta.tutorial.roster.entity.Team;
-import jakarta.tutorial.roster.entity.Team_;
-import jakarta.tutorial.roster.entity.WinterLeague;
 import jakarta.tutorial.roster.util.IncorrectSportException;
 import jakarta.tutorial.roster.util.LeagueDetails;
 import jakarta.tutorial.roster.util.PlayerDetails;
 import jakarta.tutorial.roster.util.TeamDetails;
+import jakartaee.tutorial.roster.entity.League;
+import jakartaee.tutorial.roster.entity.League_;
+import jakartaee.tutorial.roster.entity.Player;
+import jakartaee.tutorial.roster.entity.Player_;
+import jakartaee.tutorial.roster.entity.SummerLeague;
+import jakartaee.tutorial.roster.entity.Team;
+import jakartaee.tutorial.roster.entity.Team_;
+import jakartaee.tutorial.roster.entity.WinterLeague;
 
 /**
  * This is the bean class for the RequestBean enterprise bean.

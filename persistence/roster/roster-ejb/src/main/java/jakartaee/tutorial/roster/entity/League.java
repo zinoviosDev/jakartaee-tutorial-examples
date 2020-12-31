@@ -8,37 +8,27 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-package jakarta.tutorial.roster.entity;
+package jakartaee.tutorial.roster.entity;
 
 import java.io.Serializable;
 import java.util.Collection;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
-@Entity
-@Table(name = "PERSISTENCE_ROSTER_PLAYER")
-public class Player implements Serializable {
-    private static final long serialVersionUID = -2760127516426049966L;
-    private String id;
-    private String name;
-    private String position;
-    private double salary;
-    private Collection<Team> teams;
-        
-    /** Creates a new instance of Player */
-    public Player() {
-    }
-    
-    public Player(String id, String name, String position, double salary) {
-        this.id = id;
-        this.name = name;
-        this.position = position;
-        this.salary = salary;
-    }
 
+@Entity
+@Table(name = "PERSISTENCE_ROSTER_LEAGUE")
+public abstract class League implements Serializable {
+    private static final long serialVersionUID = 5060910864394673463L;
+    protected String id;
+    protected String name;
+    protected String sport;
+    protected Collection<Team> teams;
+        
     @Id
     public String getId() {
         return id;
@@ -56,23 +46,15 @@ public class Player implements Serializable {
         this.name = name;
     }
 
-    public String getPosition() {
-        return position;
+    public String getSport() {
+        return sport;
     }
 
-    public void setPosition(String position) {
-        this.position = position;
+    public void setSport(String sport) {
+        this.sport = sport;
     }
 
-    public double getSalary() {
-        return salary;
-    }
-
-    public void setSalary(double salary) {
-        this.salary = salary;
-    }
-
-    @ManyToMany(mappedBy="players")
+    @OneToMany(cascade=CascadeType.ALL, mappedBy="league")
     public Collection<Team> getTeams() {
         return teams;
     }

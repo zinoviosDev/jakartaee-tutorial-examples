@@ -23,9 +23,9 @@ import jakarta.ejb.EJB;
 import jakarta.enterprise.context.SessionScoped;
 import jakarta.inject.Named;
 import jakarta.tutorial.dukestutoring.ejb.AdminBean;
-import jakarta.tutorial.dukestutoring.entity.Address;
-import jakarta.tutorial.dukestutoring.entity.Guardian;
-import jakarta.tutorial.dukestutoring.entity.Student;
+import jakartaee.tutorial.dukestutoring.entity.Address;
+import jakartaee.tutorial.dukestutoring.entity.Guardian;
+import jakartaee.tutorial.dukestutoring.entity.Student;
 
 /**
  *
