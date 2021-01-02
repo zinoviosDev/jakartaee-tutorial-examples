@@ -18,8 +18,8 @@
         <artifactId>examples</artifactId>
         <version>9.0-SNAPSHOT</version>
     </parent>
-
-    <artifactId>batch</artifactId>
+	<groupId>jakarta.tutorial.batch</groupId>
+    <artifactId>parent</artifactId>
     <packaging>pom</packaging>
   
     <name>batch</name>
@@ -28,16 +28,4 @@
         <module>webserverlog</module>
 		<module>phonebilling</module>
     </modules>
-    
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <configuration>
-                    <failOnMissingWebXml>false</failOnMissingWebXml>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
 </project>

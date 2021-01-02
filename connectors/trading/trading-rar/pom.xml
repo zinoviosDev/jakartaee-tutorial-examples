@@ -13,20 +13,19 @@
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <parent>
+	    <groupId>jakarta.tutorial.connectors.trading</groupId>
+	    <artifactId>parent</artifactId>
+        <version>9.0-SNAPSHOT</version>
+    </parent>
 
     <artifactId>trading-rar</artifactId>
     <packaging>rar</packaging>
     <name>trading-rar</name>
-    
-    <parent>
-        <artifactId>trading</artifactId>
-        <groupId>jakarta.tutorial</groupId>
-        <version>9.0-SNAPSHOT</version>
-    </parent>
 
     <build>
         <plugins>
-            <plugin>
+        	<plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>${maven.jar.plugin.version}</version>
@@ -49,13 +48,7 @@
                 <configuration>
                     <finalName>trading-rar</finalName>
                     <rarSourceDirectory>${basedir}/target/classes</rarSourceDirectory>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.codehaus.cargo</groupId>
-                <artifactId>cargo-maven2-plugin</artifactId>
-                <configuration>
-                    <skip>true</skip>
+					<warnOnMissingRaXml>false</warnOnMissingRaXml>
                 </configuration>
             </plugin>
         </plugins>

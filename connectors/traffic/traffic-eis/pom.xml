@@ -12,16 +12,15 @@
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <parent>
+		<groupId>jakarta.tutorial.connectors.traffic</groupId>
+	    <artifactId>parent</artifactId>
+        <version>9.0-SNAPSHOT</version>
+    </parent>
 
     <artifactId>traffic-eis</artifactId>
     <packaging>jar</packaging>
-    
-    <parent>
-        <artifactId>traffic</artifactId>
-        <groupId>jakarta.tutorial</groupId>
-        <version>9.0-SNAPSHOT</version>
-    </parent>
-    
+
     <dependencies>
         <dependency>
             <groupId>jakarta.json</groupId>
@@ -36,7 +35,6 @@
     </dependencies>
   
     <build>
-        <finalName>${project.artifactId}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
@@ -44,13 +42,6 @@
                 <version>${maven.exec.plugin.version}</version>
                 <configuration>
                     <mainClass>jakarta.tutorial.traffic.eis.TrafficServer</mainClass>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.codehaus.cargo</groupId>
-                <artifactId>cargo-maven2-plugin</artifactId>
-                <configuration>
-                    <skip>true</skip>
                 </configuration>
             </plugin>
         </plugins>

@@ -13,15 +13,15 @@
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-  
-    <artifactId>shared</artifactId>
-    <packaging>pom</packaging>
-     
     <parent>
-        <artifactId>jms</artifactId>
-        <groupId>jakarta.tutorial</groupId>
+        <groupId>jakarta.tutorial.jms</groupId>
+        <artifactId>parent</artifactId>
         <version>9.0-SNAPSHOT</version>
-    </parent>
+    </parent>  
+
+    <groupId>jakarta.tutorial.jms.shared</groupId>
+    <artifactId>parent</artifactId>
+    <packaging>pom</packaging>
 
     <name>shared</name>
   
@@ -29,4 +29,15 @@
         <module>sharedconsumer</module>
         <module>shareddurableconsumer</module>
     </modules>
+<!-- <build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-acr-plugin</artifactId>
+					<version>${maven.acr.plugin.version}</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>  -->	
 </project>

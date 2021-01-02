@@ -15,8 +15,8 @@
     <modelVersion>4.0.0</modelVersion>
     
     <parent>
-        <artifactId>clientsessionmdb</artifactId>
-        <groupId>jakarta.tutorial</groupId>
+        <groupId>jakarta.tutorial.jms.clientsessionmdb</groupId>
+        <artifactId>parent</artifactId>
         <version>9.0-SNAPSHOT</version>
     </parent>
 
@@ -38,12 +38,13 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-acr-plugin</artifactId>
-                <version>${maven.acr.plugin.version}</version>
                 <extensions>true</extensions>
                 <configuration>
                     <archive>
                         <manifest>
-                            <addClasspath>true</addClasspath>
+                        	<addClasspath>true</addClasspath>
+                        	<classpathLayoutType>custom</classpathLayoutType>
+               				<customClasspathLayout>$${artifact.artifactId}.$${artifact.extension}</customClasspathLayout>
                             <mainClass>jakarta.tutorial.clientsessionmdb.appclient.MyAppClient</mainClass>
                         </manifest>
                     </archive>

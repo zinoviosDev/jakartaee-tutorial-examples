@@ -15,8 +15,8 @@
     <modelVersion>4.0.0</modelVersion>
         
     <parent>
-        <artifactId>simplemessage</artifactId>
-        <groupId>jakarta.tutorial</groupId>
+        <groupId>jakarta.tutorial.jms.simplemessage</groupId>
+        <artifactId>parent</artifactId>
         <version>9.0-SNAPSHOT</version>
     </parent>
 
@@ -27,13 +27,13 @@
     
     <dependencies>
         <dependency>
-            <groupId>jakarta.tutorial</groupId>
+            <groupId>${project.groupId}</groupId>
             <artifactId>simplemessage-ejb</artifactId>
             <version>${project.version}</version>
             <type>ejb</type>
         </dependency>
         <dependency>
-            <groupId>jakarta.tutorial</groupId>
+            <groupId>${project.groupId}</groupId>
             <artifactId>simplemessage-appclient</artifactId>
             <version>${project.version}</version>
             <type>app-client</type>
@@ -47,16 +47,14 @@
                 <artifactId>maven-ear-plugin</artifactId>
                 <version>${maven.ear.plugin.version}</version>
                 <configuration>
-                    <version>6</version>
                     <defaultLibBundleDir>lib</defaultLibBundleDir>
                     <modules>
                         <ejbModule>
-                            <groupId>jakarta.tutorial</groupId>
+                            <groupId>${project.groupId}</groupId>
                             <artifactId>simplemessage-ejb</artifactId>
-                            <bundleFileName>simplemessage-ejb.jar</bundleFileName>
                         </ejbModule>
                         <appClientModule>
-                            <groupId>jakarta.tutorial</groupId>
+                            <groupId>${project.groupId}</groupId>
                             <artifactId>simplemessage-appclient</artifactId>
                         </appClientModule>
                     </modules>
@@ -65,7 +63,6 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-acr-plugin</artifactId>
-                <version>${maven.acr.plugin.version}</version>
                 <extensions>true</extensions>
             </plugin>
             <plugin>

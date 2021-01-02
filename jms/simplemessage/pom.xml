@@ -15,12 +15,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <artifactId>jms</artifactId>
-        <groupId>jakarta.tutorial</groupId>
+        <groupId>jakarta.tutorial.jms</groupId>
+        <artifactId>parent</artifactId>
         <version>9.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>simplemessage</artifactId>
+    <groupId>jakarta.tutorial.jms.simplemessage</groupId>
+    <artifactId>parent</artifactId>
     <packaging>pom</packaging>
 
     <name>simplemessage</name>

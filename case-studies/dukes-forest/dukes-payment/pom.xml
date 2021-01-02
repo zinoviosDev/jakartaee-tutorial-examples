@@ -16,11 +16,10 @@
 
     
     <parent>
-        <groupId>jakarta.tutorial</groupId>
-        <artifactId>dukes-forest</artifactId>
+		<groupId>jakarta.tutorial.case-studies.dukes-forest</groupId>    
+        <artifactId>parent</artifactId>
         <version>9.0-SNAPSHOT</version>
     </parent>
-
     <artifactId>dukes-payment</artifactId>
     <packaging>war</packaging>
 

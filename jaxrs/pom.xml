@@ -12,15 +12,17 @@
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>jaxrs</artifactId>
-    <packaging>pom</packaging>
-    <name>jaxrs</name>
-  
     <parent>
         <groupId>jakarta.tutorial</groupId>
         <artifactId>examples</artifactId>
         <version>9.0-SNAPSHOT</version>
     </parent>
+
+    <groupId>jakarta.tutorial.jaxrs</groupId>
+    <artifactId>parent</artifactId>
+    <packaging>pom</packaging>
+    <name>jaxrs</name>
+  
     
     <modules>
         <module>customer</module>
@@ -28,15 +30,4 @@
         <module>rsvp</module>
     </modules>
     
-    <build>
-    	<finalName>${project.artifactId}</finalName>
-        <plugins>
-            <plugin>
-                <artifactId>maven-war-plugin</artifactId>
-                <configuration>
-                    <failOnMissingWebXml>false</failOnMissingWebXml>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
 </project>

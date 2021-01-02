@@ -14,11 +14,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <artifactId>dukes-tutoring</artifactId>
-        <groupId>jakarta.tutorial</groupId>
+	    <groupId>jakarta.tutorial.case-studies.dukes-tutoring</groupId>
+	    <artifactId>parent</artifactId>
         <version>9.0-SNAPSHOT</version>
     </parent>
-
     <artifactId>dukes-tutoring-war</artifactId>
     <packaging>war</packaging>
 
@@ -44,24 +43,24 @@
                         <goals>
                             <goal>exec</goal>
                         </goals>
+                        <configuration>
+		                    <skip>false</skip>
+		                    <executable>${glassfish.home}/bin/asadmin${glassfish.executables.suffix}</executable>
+		                    <successCodes>
+		                        <successCode>0</successCode>
+		                        <successCode>1</successCode>
+		                    </successCodes>
+		                    <arguments>
+		                        <argument>create-auth-realm</argument>
+		                        <argument>--classname</argument>
+		                        <argument>com.sun.enterprise.security.auth.realm.jdbc.JDBCRealm</argument>
+		                        <argument>--property</argument>
+		                        <argument>jaas-context=jdbcRealm:datasource-jndi='java:global/TutoringDataSource':user-table=tutoring.PERSON:user-name-column=email:password-column=password:group-table=tutoring.PERSON:group-name-column=DTYPE:digest-algorithm=none</argument>
+		                        <argument>tutoringRealm</argument>
+		                    </arguments>
+		                </configuration>
                     </execution>
                 </executions>
-                <configuration>
-                    <skip>false</skip>
-                    <executable>${glassfish.home}/bin/asadmin${glassfish.executables.suffix}</executable>
-                    <arguments>
-                        <argument>create-auth-realm</argument>
-                        <argument>--classname</argument>
-                        <argument>com.sun.enterprise.security.auth.realm.jdbc.JDBCRealm</argument>
-                        <argument>--property</argument>
-                        <argument>jaas-context=jdbcRealm:datasource-jndi='java:global/TutoringDataSource':user-table=tutoring.PERSON:user-name-column=email:password-column=password:group-table=tutoring.PERSON:group-name-column=DTYPE:digest-algorithm=none</argument>
-                        <argument>tutoringRealm</argument>
-                    </arguments>
-                    <successCodes>
-                        <successCode>0</successCode>
-                        <successCode>1</successCode>
-                    </successCodes>
-                </configuration>
             </plugin>
         </plugins>
     </build>

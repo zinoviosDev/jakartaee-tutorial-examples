@@ -19,8 +19,8 @@
         <artifactId>examples</artifactId>
         <version>9.0-SNAPSHOT</version>
     </parent>
- 
-    <artifactId>jms</artifactId>
+	<groupId>jakarta.tutorial.jms</groupId>
+    <artifactId>parent</artifactId>
     <packaging>pom</packaging>
    
     <name>jms</name>
@@ -35,8 +35,5 @@
         <module>websimplemessage</module>
         <module>transactedexample</module>
     </modules>
-    
-    <build>
-        <finalName>${project.artifactId}</finalName>
-    </build>
+
 </project>

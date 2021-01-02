@@ -15,18 +15,14 @@
     <modelVersion>4.0.0</modelVersion>
     
     <parent>
-        <artifactId>batch</artifactId>
-        <groupId>jakarta.tutorial</groupId>
+        <groupId>jakarta.tutorial.batch</groupId>
+        <artifactId>parent</artifactId>
         <version>9.0-SNAPSHOT</version>
     </parent>
-
-    <groupId>jakarta.tutorial.batch</groupId>
+    
     <artifactId>phonebilling</artifactId>
     <packaging>war</packaging>
     
     <name>phonebilling</name>
 
-    <build>
-        <finalName>${project.artifactId}</finalName>
-    </build>
 </project>

@@ -14,12 +14,13 @@
     <modelVersion>4.0.0</modelVersion>
     
     <parent>
-        <groupId>jakarta.tutorial</groupId>
-        <artifactId>web</artifactId>
+        <groupId>jakarta.tutorial.web</groupId>
+        <artifactId>parent</artifactId>
         <version>9.0-SNAPSHOT</version>
     </parent>
    
-    <artifactId>jsonp</artifactId>
+    <groupId>jakarta.tutorial.web.jsonp</groupId>
+    <artifactId>parent</artifactId>
     <packaging>pom</packaging>
  
     <name>jsonp</name>

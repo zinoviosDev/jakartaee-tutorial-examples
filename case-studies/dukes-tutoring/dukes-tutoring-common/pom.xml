@@ -9,14 +9,13 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>jakarta.tutorial</groupId>
-		<artifactId>dukes-tutoring</artifactId>
+	    <groupId>jakarta.tutorial.case-studies.dukes-tutoring</groupId>
+		<artifactId>parent</artifactId>
 		<version>9.0-SNAPSHOT</version>
 	</parent>
 	<artifactId>dukes-tutoring-common</artifactId>
 	<name>dukes-tutoring-common</name>
 	<build>
-		<finalName>${project.artifactId}</finalName>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -28,14 +27,6 @@
 							<version>${eclipselink.version}</version>
 						</path>
 					</annotationProcessorPaths>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>exec-maven-plugin</artifactId>
-				<configuration>
-					<skip>true</skip>
-					<executable>${glassfish.home}/bin/asadmin${glassfish.executables.suffix}</executable>
 				</configuration>
 			</plugin>
 		</plugins>

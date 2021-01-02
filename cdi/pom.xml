@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
 
     Copyright (c) 2018, 2020 Oracle and/or its affiliates. All rights reserved.
@@ -18,8 +19,8 @@
         <artifactId>examples</artifactId>
         <version>9.0-SNAPSHOT</version>
     </parent>
-
-    <artifactId>cdi</artifactId>
+	<groupId>jakarta.tutorial.cdi</groupId>
+    <artifactId>parent</artifactId>
     <packaging>pom</packaging>
   
     <name>cdi</name>
@@ -33,8 +34,5 @@
         <module>producermethods</module>
         <module>simplegreeting</module>
     </modules>
-    
-    <build>
-        <finalName>${project.artifactId}</finalName>
-    </build>
+
 </project>

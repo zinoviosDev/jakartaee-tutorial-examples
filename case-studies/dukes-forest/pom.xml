@@ -15,12 +15,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <artifactId>case-studies</artifactId>
-        <groupId>jakarta.tutorial</groupId>
+	    <groupId>jakarta.tutorial.case-studies</groupId>
+        <artifactId>parent</artifactId>
         <version>9.0-SNAPSHOT</version>
     </parent>
-    
-    <artifactId>dukes-forest</artifactId>
+	<groupId>jakarta.tutorial.case-studies.dukes-forest</groupId>    
+    <artifactId>parent</artifactId>
     <packaging>pom</packaging>
 
     <name>dukes-forest</name>
@@ -35,15 +35,13 @@
     </modules>
     
     <build>
-        <finalName>${project.artifactId}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
-                <version>1.2.1</version>
+                <version>${maven.exec.plugin.version}</version>
                 <configuration>
                     <skip>true</skip>
-                    <executable>${glassfish.home}/bin/asadmin${glassfish.executables.suffix}</executable>
                 </configuration>
             </plugin>    
         </plugins>      

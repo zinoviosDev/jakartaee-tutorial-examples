@@ -15,11 +15,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>jakarta.tutorial</groupId>
-        <artifactId>dukes-forest</artifactId>
+		<groupId>jakarta.tutorial.case-studies.dukes-forest</groupId>    
+        <artifactId>parent</artifactId>
         <version>9.0-SNAPSHOT</version>
     </parent>
-
     <artifactId>dukes-store</artifactId>
     <packaging>war</packaging>
 
@@ -60,6 +59,10 @@
                 <configuration>
                     <skip>false</skip>
                     <executable>${glassfish.home}/bin/asadmin${glassfish.executables.suffix}</executable>
+                    <successCodes>
+                        <successCode>0</successCode>
+                        <successCode>1</successCode>
+                    </successCodes>
                     <arguments>
                         <argument>set</argument>
                         <argument>server.security-service.activate-default-principal-to-role-mapping=true</argument>
@@ -68,7 +71,6 @@
                 </configuration>
             </plugin>          
         </plugins>
-        
     </build>
 
 </project>

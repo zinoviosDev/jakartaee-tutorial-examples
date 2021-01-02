@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
 
     Copyright (c) 2018, 2020 Oracle and/or its affiliates. All rights reserved.
@@ -13,35 +14,46 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <groupId>jakarta.tutorial.ejb.cart</groupId>
+        <artifactId>parent</artifactId>
+        <version>9.0-SNAPSHOT</version>
+    </parent>
+
     <artifactId>cart-ear</artifactId>
     <packaging>ear</packaging>
 
     <name>cart-ear</name>
 
-    <parent>
-        <artifactId>cart</artifactId>
-        <groupId>jakarta.tutorial</groupId>
-        <version>9.0-SNAPSHOT</version>
-    </parent>
-
+    <dependencies>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>cart-ejb</artifactId>
+            <version>${project.version}</version>
+            <type>ejb</type>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>cart-appclient</artifactId>
+            <version>${project.version}</version>
+            <type>app-client</type>
+        </dependency>
+    </dependencies>
     <build>
-        <finalName>${project.artifactId}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-ear-plugin</artifactId>
-                <version>${maven.ear.plugin.version}</version>
+				<version>${maven.ear.plugin.version}</version>
                 <configuration>
-                    <version>6</version>
                     <defaultLibBundleDir>lib</defaultLibBundleDir>
                     <modules>
                         <ejbModule>
-                            <groupId>jakarta.tutorial</groupId>
+                            <groupId>${project.groupId}</groupId>
                             <artifactId>cart-ejb</artifactId>
-                            <bundleFileName>cart-ejb.jar</bundleFileName>
                         </ejbModule>
                         <appClientModule>
-                            <groupId>jakarta.tutorial</groupId>
+                            <groupId>${project.groupId}</groupId>
                             <artifactId>cart-appclient</artifactId>
                         </appClientModule>
                     </modules>
@@ -50,7 +62,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-acr-plugin</artifactId>
-                <version>${maven.acr.plugin.version}</version>
+				<version>${maven.acr.plugin.version}</version>
                 <extensions>true</extensions>
                 <configuration>
                     <archive>
@@ -64,7 +76,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
-                <version>${maven.exec.plugin.version}</version>
+				<version>${maven.exec.plugin.version}</version>
                 <executions>
                     <execution>
                         <id>get-client-stubs</id>
@@ -74,6 +86,10 @@
                         </goals>
                         <configuration>
                             <executable>${glassfish.home}/bin/asadmin${glassfish.executables.suffix}</executable>
+                            <successCodes>
+                            	<successCode>0</successCode>
+                            	<successCode>1</successCode>
+                            </successCodes>
                             <!-- optional -->
                             <arguments>
                                 <argument>get-client-stubs</argument>
@@ -91,6 +107,10 @@
                         </goals>
                         <configuration>
                             <executable>${glassfish.home}/glassfish/bin/appclient${glassfish.executables.suffix}</executable>
+                            <successCodes>
+                            	<successCode>0</successCode>
+                            	<successCode>1</successCode>
+                            </successCodes>
                             <!-- optional -->
                             <arguments>
                                 <argument>-client</argument>
@@ -102,18 +122,4 @@
             </plugin>
         </plugins>
     </build>
-    <dependencies>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>cart-ejb</artifactId>
-            <version>${project.version}</version>
-            <type>ejb</type>
-        </dependency>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>cart-appclient</artifactId>
-            <version>${project.version}</version>
-            <type>app-client</type>
-        </dependency>
-    </dependencies>
 </project>

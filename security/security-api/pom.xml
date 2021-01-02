@@ -15,12 +15,13 @@
     <modelVersion>4.0.0</modelVersion>
     
     <parent>
-        <artifactId>security</artifactId>
-        <groupId>jakarta.tutorial</groupId>
+        <groupId>jakarta.tutorial.security</groupId>
+        <artifactId>parent</artifactId>
         <version>9.0-SNAPSHOT</version>
     </parent>
-    
-    <artifactId>security-api</artifactId>
+
+    <groupId>jakarta.tutorial.security.security-api</groupId>    
+    <artifactId>parent</artifactId>
     <packaging>pom</packaging>
     
     <name>security-api</name>
