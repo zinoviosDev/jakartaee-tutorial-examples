@@ -33,7 +33,6 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
-				<version>${maven.exec.plugin.version}</version>
                 <configuration>
                     <skip>true</skip>
                 </configuration>

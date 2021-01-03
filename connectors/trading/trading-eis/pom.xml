@@ -26,7 +26,6 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
-                <version>${maven.exec.plugin.version}</version>
                 <configuration>
                     <mainClass>jakarta.tutorial.trading.eis.TradeExecServer</mainClass>
                 </configuration>

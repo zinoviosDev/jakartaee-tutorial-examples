@@ -28,7 +28,6 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-acr-plugin</artifactId>
-                <version>${maven.acr.plugin.version}</version>
                 <extensions>true</extensions>
                 <configuration>
                     <archive>
@@ -62,7 +61,6 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
-                <version>${maven.exec.plugin.version}</version>
                 <executions>
                     <execution>
                         <id>run-appclient</id>

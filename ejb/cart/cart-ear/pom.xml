@@ -44,7 +44,6 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-ear-plugin</artifactId>
-				<version>${maven.ear.plugin.version}</version>
                 <configuration>
                     <defaultLibBundleDir>lib</defaultLibBundleDir>
                     <modules>
@@ -62,7 +61,6 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-acr-plugin</artifactId>
-				<version>${maven.acr.plugin.version}</version>
                 <extensions>true</extensions>
                 <configuration>
                     <archive>
@@ -76,7 +74,6 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
-				<version>${maven.exec.plugin.version}</version>
                 <executions>
                     <execution>
                         <id>get-client-stubs</id>
