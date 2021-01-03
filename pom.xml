@@ -192,7 +192,7 @@
                     <version>${cargo.plugin.version}</version>
                 </plugin>
 				<plugin>
-                    <groupId>org.codehaus.cargo</groupId>
+                    <groupId>org.codehaus.mojo</groupId>
                     <artifactId>exec-maven-plugin</artifactId>
                     <version>${maven.exec.plugin.version}</version>
                 </plugin>
